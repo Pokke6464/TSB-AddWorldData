@@ -21,7 +21,7 @@ execute unless loaded 25 7 11 run return 1
     data modify storage asset:trader Trades[-1].BuyB set value {PresetItem:"currency/",Count:2b}
     data modify storage asset:trader Trades[-1].Sell set value {PresetItem:"currency/high",Count:1b}
 
-# 取引 解呪進行率3%で無限増殖
+# 取引 解呪進行率3%で解放
     data modify storage asset:trader Trades append value {}
     data modify storage asset:trader Trades[-1].BuyA set value 1285
     data modify storage asset:trader Trades[-1].Sell set value {PresetItem:"sacred_shard/lv-4",Count:64b}
