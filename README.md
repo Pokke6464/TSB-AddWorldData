@@ -95,7 +95,8 @@ IDとPosはregisterに記述されている物と一致させてください。
 デバッグ用のコマンドとして、`/function add_world_data:debug/generate.m`が存在します。  
 これは指定した物を再生成するために使うもので、  
 world_data_registerに登録されているTypeとIDを指定するだけで再生成が可能です。  
-Typeにはspawner、container、trader、island、teleporterのいずれかを記述します。
+Typeにはspawner、container、trader、island、teleporterのいずれかを記述します。  
+テレポーターの座標を変更してから再生成しても、テレポート位置は変化しないことに注意してください。
 
 例として、IDが9000のスポナーを生成する場合は以下のように書きます。  
 **Typeに書く文字は全て小文字**なことに注意してください。
