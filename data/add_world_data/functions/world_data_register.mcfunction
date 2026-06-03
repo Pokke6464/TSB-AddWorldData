@@ -32,8 +32,8 @@
 
 
 # それが何なのかを識別できるようにするデータを追加
-    data modify storage add_world_data: WorldData.spawner.[].Type set value "spawner"
-    data modify storage add_world_data: WorldData.container.[].Type set value "container"
-    data modify storage add_world_data: WorldData.trader.[].Type set value "trader"
-    data modify storage add_world_data: WorldData.island.[].Type set value "island"
-    data modify storage add_world_data: WorldData.teleporter.[].Type set value "teleporter"
+    execute if data storage add_world_data: WorldData.spawner[] run data modify storage add_world_data: WorldData.spawner[].Type set value "spawner"
+    execute if data storage add_world_data: WorldData.container[] run data modify storage add_world_data: WorldData.container[].Type set value "container"
+    execute if data storage add_world_data: WorldData.trader[] run data modify storage add_world_data: WorldData.trader[].Type set value "trader"
+    execute if data storage add_world_data: WorldData.island[] run data modify storage add_world_data: WorldData.island[].Type set value "island"
+    execute if data storage add_world_data: WorldData.teleporter[] run data modify storage add_world_data: WorldData.teleporter[].Type set value "teleporter"
