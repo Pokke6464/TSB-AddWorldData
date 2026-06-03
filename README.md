@@ -69,7 +69,7 @@ world_data_register = `add_world_data/functions/world_data_register`
 registerが存在しないと配置できません。registerの追加方法は前述のサンプルを参考にしてください。
 
 world_data_registerの`...WorldData.追加したい物 set value []`の`[]`の中に  
-`{Type:"追加したい物(小文字)", ID:数値, Pos:"半角空白で区切った座標", Dimension:"ディメンション名"}`を記述します。  
+`{ID:数値, Pos:"半角空白で区切った座標", Dimension:"ディメンション名"}`を記述します。  
 IDとPosはregisterに記述されている物と一致させてください。  
 **Dimensionは省略可能**で、省略した場合はoverworld(通常世界)に配置されます。  
 アルファベットの大文字/小文字、ダブルクオーテーション(`"`)の有無に注意してください。
@@ -77,17 +77,17 @@ IDとPosはregisterに記述されている物と一致させてください。
 
 例として、IDが9000、位置が0 0 0のスポナーを追加する場合はworld_data_registerに以下のように記述します。  
 ```
-...WorldData.spawner set value [{Type:"spawner", ID:9000, Pos:"0 0 0"}]
+...WorldData.spawner set value [{ID:9000, Pos:"0 0 0"}]
 ```
 
 加えて、IDが9001、位置が0 1 0の物も追加したい場合は以下のように記述します。  
 ```
-...WorldData.spawner set value [{Type:"spawner", ID:9000, Pos:"0 0 0"}, {Type:"spawner", ID:9001, Pos:"0 1 0"}]
+...WorldData.spawner set value [{ID:9000, Pos:"0 0 0"}, {ID:9001, Pos:"0 1 0"}]
 ```
 
 更に加えて、IDが9002、位置が0 2 0、ディメンションがエンドの物も追加したい場合は以下のように記述します。  
 ```
-...WorldData.spawner set value [{Type:"spawner", ID:9000, Pos:"0 0 0"}, {Type:"spawner", ID:9001, Pos:"0 1 0"}, {Type:"spawner", ID:9002, Pos:"0 2 0", Dimension:"the_end"}]
+...WorldData.spawner set value [{ID:9000, Pos:"0 0 0"}, {ID:9001, Pos:"0 1 0"}, {ID:9002, Pos:"0 2 0", Dimension:"the_end"}]
 ```
 
 
@@ -147,8 +147,8 @@ Activate: 起動している状態
 となっている。
 
 VisibleDeactivateはエンドのテレポーターで使用されており、これを起動するために  
-エンド内ではプレイヤーから半径5マス以内に入ったテレポーターをActivateにする処理が常に実行されているので、  
-エンドにテレポーターを追加する際は注意が必要。
+エンド内ではプレイヤーから半径5マス以内に入ったテレポーターをActivateにする処理が常に実行されるので、  
+エンドにテレポーターを追加する場合は注意。
 
 通常のTSBの`テレポート先として見た時の色(Color)`で使われている色の数値は、  
 デフォルトの白色: 255, 255, 255  
