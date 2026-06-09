@@ -14,6 +14,9 @@
 # {ID:0, Pos:"0 0 0"}
 # {ID:0, Pos:"0 0 0", Dimension:""}
 
+# 詳しい使い方などはこちら
+# https://github.com/Pokke6464/TSB-AddWorldData#%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E8%BF%BD%E5%8A%A0%E6%96%B9%E6%B3%95
+
 
 # スポナーのIDと位置を登録
     data modify storage add_world_data: WorldData.spawner set value [{ID:4000, Pos:"68 20 -17"}, {ID:4001, Pos:"61 19 -23"}]
